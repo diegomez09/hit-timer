@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    <h1>Tiempo activo</h1>
+    <input
+      [(ngModel)]="activeTime"
+      class="col-6"
+      type="text"
+      placeholder="Ejemplo: 30"
+    />
+    <select [(ngModel)]="activoUnidad" class="col-6" aria-label="Unidades">
+      <option selected>Selecciona unidad</option>
+      <option *ngFor="let item of times" value="{{ item }}">{{ item }}</option>
+    </select>
+  </div>
+  <div class="row">
+    <h1>Tiempo Reposo</h1>
+    <input
+      [(ngModel)]="pasiveTime"
+      class="col-6"
+      type="text"
+      placeholder="Ejemplo: 15"
+    />
+    <select [(ngModel)]="reposoUnidad" class="col-6" aria-label="Unidades">
+      <option selected>Selecciona unidad</option>
+      <option *ngFor="let item of times" value="{{ item }}">{{ item }}</option>
+    </select>
+  </div>
+  <!-- <div class="row">
+    <h1>Descanso entre series</h1>
+    <input
+      [(ngModel)]="serieTime"
+      class="col-6"
+      type="text"
+      placeholder="Ejemplo: 60"
+    />
+    <select [(ngModel)]="entreSeries" class="col-6" aria-label="Unidades">
+      <option selected>Selecciona unidad</option>
+      <option *ngFor="let item of times" value="{{ item }}">{{ item }}</option>
+    </select>
+  </div> -->
+  <!-- <div class="row">
+    <h1>Series / Repeticiones</h1>
+    <input
+      [(ngModel)]="series"
+      class="col-12"
+      type="text"
+      placeholder="Ejemplo: 3"
+    />
+  </div> -->
+  <div class="row">
+    <div class="d-grid gap-2 col-6 mx-auto" (click)="start()">
+      <button type="button" class="btn btn-success">Start</button>
+    </div>
+  </div>
+</div>
